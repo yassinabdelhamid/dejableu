@@ -15,6 +15,10 @@ import javafx.stage.Stage;
 public class ControllerColourpart1 implements Initializable {
 	
 	public Button next;
+	public Button blue;
+	public Button red;
+	public Button yellow;
+	public Button green;
 	
 	//Methode um View zu wächseln 
 		public void nextGame(ActionEvent event) {
@@ -27,6 +31,82 @@ public class ControllerColourpart1 implements Initializable {
 
 			try {
 				root = FXMLLoader.load(getClass().getResource("Colourgamepart1.fxml"));
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+
+			Scene scene = new Scene(root);
+			stage.setScene(scene);
+			stage.show();
+		}
+		
+		public void win(ActionEvent event) {
+			
+	    	Stage stage;
+			Parent root = null;
+
+			stage = (Stage) blue.getScene().getWindow();
+			stage.setTitle("Dejableu");
+
+			try {
+				root = FXMLLoader.load(getClass().getResource("Colourgamewin.fxml"));
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+
+			Scene scene = new Scene(root);
+			stage.setScene(scene);
+			stage.show();
+		}
+		
+		public void fail1(ActionEvent event) {
+			
+	    	Stage stage;
+			Parent root = null;
+
+			stage = (Stage) green.getScene().getWindow();
+			stage.setTitle("Dejableu");
+
+			try {
+				root = FXMLLoader.load(getClass().getResource("Colourgamefail.fxml"));
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+
+			Scene scene = new Scene(root);
+			stage.setScene(scene);
+			stage.show();
+		}
+		
+		public void fail2(ActionEvent event) {
+			
+	    	Stage stage;
+			Parent root = null;
+
+			stage = (Stage) red.getScene().getWindow();
+			stage.setTitle("Dejableu");
+
+			try {
+				root = FXMLLoader.load(getClass().getResource("Colourgamefail.fxml"));
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+
+			Scene scene = new Scene(root);
+			stage.setScene(scene);
+			stage.show();
+		}
+		
+		public void fail3(ActionEvent event) {
+			
+	    	Stage stage;
+			Parent root = null;
+
+			stage = (Stage) yellow.getScene().getWindow();
+			stage.setTitle("Dejableu");
+
+			try {
+				root = FXMLLoader.load(getClass().getResource("Colourgamefail.fxml"));
 			} catch (IOException e) {
 				e.printStackTrace();
 			}

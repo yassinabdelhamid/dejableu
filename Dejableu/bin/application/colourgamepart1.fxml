@@ -20,9 +20,9 @@
       <Label layoutX="229.0" layoutY="109.0" prefHeight="25.0" prefWidth="72.0" text="Drücke den " textFill="#eeeeee" />
       <Label layoutX="293.0" layoutY="109.0" prefHeight="25.0" prefWidth="40.0" text="blauen" textFill="#dc0c0c" />
       <Label layoutX="333.0" layoutY="109.0" prefHeight="25.0" prefWidth="40.0" text="Knopf" textFill="#eeeeee" />
-      <Button layoutX="313.0" layoutY="250.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="88.0" style="-fx-background-color: green;" />
-      <Button layoutX="205.0" layoutY="250.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="88.0" style="-fx-background-color: blue;" />
-      <Button layoutX="205.0" layoutY="164.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="88.0" style="-fx-background-color: red;" />
-      <Button layoutX="313.0" layoutY="164.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="88.0" style="-fx-background-color: yellow;" />
+      <Button fx:id="green" onAction="#fail1" layoutX="313.0" layoutY="250.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="88.0" style="-fx-background-color: green;" />
+      <Button fx:id="blue" onAction="#win" layoutX="205.0" layoutY="250.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="88.0" style="-fx-background-color: blue;" />
+      <Button fx:id="red" onAction="#fail2" layoutX="205.0" layoutY="164.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="88.0" style="-fx-background-color: red;" />
+      <Button fx:id="yellow" onAction="#fail3" layoutX="313.0" layoutY="164.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="88.0" style="-fx-background-color: yellow;" />
    </children>
 </AnchorPane>
