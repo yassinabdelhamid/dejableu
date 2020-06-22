@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2c2f33;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerColourpart1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2c2f33;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
    <children>
       <Label layoutX="205.0" layoutY="17.0" prefHeight="40.0" prefWidth="213.0" text=" DÉJÀ BLEU" textFill="WHITE">
          <font>
@@ -18,8 +18,8 @@
          </font>
       </Label>
       <Button fx:id="next" onAction="#nextGame" layoutX="229.0" layoutY="354.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="142.0" style="-fx-background-color: green;" text="Next" />
-      <Label fx:id="number" layoutX="125.0" layoutY="150.0" prefHeight="100.0" prefWidth="103.0" text=""/>
-      <Label fx:id="name" layoutX="371.0" layoutY="150.0" prefHeight="100.0" prefWidth="103.0" text=""/>
+      <Label fx:id="number" layoutX="125.0" layoutY="150.0" prefHeight="100.0" prefWidth="103.0" textFill="WHITE" text=""/>
+      <Label fx:id="name" layoutX="371.0" layoutY="150.0" prefHeight="100.0" prefWidth="103.0" textFill="WHITE" text=""/>
       <Label layoutX="136.0" layoutY="260.0" text="Anzahl Schlücke" textFill="#f3efef" />
       <Label layoutX="390.0" layoutY="260.0" text="Spieler trinkt" textFill="#f3efef" />
    </children>

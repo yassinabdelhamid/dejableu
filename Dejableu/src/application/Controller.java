@@ -17,57 +17,19 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.scene.control.Label;
 
-public class Controller implements Initializable{
+public class Controller implements Initializable {
+	private static Controller instance;
 	
-	public Button start;
-    private ArrayList<Shots> shot = new ArrayList<Shots>();
-	@FXML private TextField user1;
-	@FXML private TextField user2;
-	@FXML private TextField user3;
-	@FXML private TextField user4;
+
+	@FXML
+	public Button next;
+    //private ArrayList<Shots> shot = new ArrayList<Shots>();
 	private static int schluecke;
 	private String[] users = {"", "", "", ""};
-	@FXML private Label name;
-	@FXML private Label number;
-	
-	//Methode um View zu wächseln 
-	public void start(ActionEvent event) {
-		
-		//newuser.setVisible(false);
-		String a = user1.getText();
-		String b = user2.getText();
-		String c = user3.getText();
-		String d = user4.getText();
-		
-			users[0] = a;
-			users[1] = b;
-			users[2] = c;
-			users[3] = d;
-		
-			displayRandomUser();
-			
-    	Stage stage;
-		Parent root = null;
-
-		stage = (Stage) start.getScene().getWindow();
-		stage.setTitle("Dejableu");
-
-		try {
-			root = FXMLLoader.load(getClass().getResource("Randomnumbergame.fxml"));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		
-		
-		Scene scene = new Scene(root);
-		stage.setScene(scene);
-		stage.show();
-		
-	}
-	
-	public void randomNumer() {
-		
-	}
+	@FXML 
+	private Label name ;
+	@FXML 
+	private Label number ;
 	
 	@FXML
 	public void displayRandomUser() {
@@ -85,15 +47,44 @@ public class Controller implements Initializable{
         System.out.println(person);
         
         name.setText(person);
-        //number.setText(schluecke.toString());
+        number.setText(Integer.toString(schluecke));
 
+	}
+	
+	@FXML
+	public void nextGame(ActionEvent event) {
+    	Stage stage;
+		Parent root = null;
+
+		stage = (Stage) next.getScene().getWindow();
+		stage.setTitle("Dejableu");
+
+		try {
+			root = FXMLLoader.load(getClass().getResource("Colourgamepart1.fxml"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		Scene scene = new Scene(root);
+		stage.setScene(scene);
+		stage.show();
 	}
     	
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		Controller.instance = this;
 		System.out.println("Let's get wasted..");
 		//System.out.println(users[0] + "ist registriert");
+		
+	}
+	
+	public void setUsers(String[] player) {
+		this.users = player;
+	}
+	
+	public static Controller getInstance() {
+		return Controller.instance;
 	}
 
 }
