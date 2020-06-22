@@ -13,16 +13,17 @@
             <Font name="Times New Roman" size="36.0" />
          </font>
       </Label>
-      <TextField layoutX="201.0" layoutY="121.0" prefHeight="25.0" prefWidth="198.0" promptText="username" text="Samuel" />
+      <TextField fx:id="user1" layoutX="201.0" layoutY="121.0" prefHeight="25.0" prefWidth="198.0" promptText="username" text="" />
       <Label layoutX="255.0" layoutY="57.0" prefHeight="25.0" prefWidth="113.0" text="schon wieder blau..." textFill="WHITE">
          <font>
             <Font name="System Italic" size="12.0" />
          </font>
       </Label>
-      <TextField layoutX="201.0" layoutY="160.0" prefHeight="25.0" prefWidth="198.0" promptText="username" text="Yassin" />
+      <TextField fx:id="user2" layoutX="201.0" layoutY="160.0" prefHeight="25.0" prefWidth="198.0" promptText="username" text="" />
       <Button layoutX="267.0" layoutY="314.0" mnemonicParsing="false" text="+" />
-      <Button fx:id="start" onAction="start" layoutX="229.0" layoutY="354.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="142.0" style="-fx-background-color: green;" text="Start" />
+      <Button fx:id="start" onAction="#start" layoutX="229.0" layoutY="354.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="142.0" style="-fx-background-color: green;" text="Start" />
       <Button layoutX="311.0" layoutY="314.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" text="-" />
-      <TextField layoutX="201.0" layoutY="200.0" prefHeight="25.0" prefWidth="198.0" promptText="username" />
+      <TextField fx:id="user3" layoutX="201.0" layoutY="200.0" prefHeight="25.0" prefWidth="198.0" promptText="username" />
+      <TextField fx:id="user4" layoutX="201.0" layoutY="240.0" prefHeight="25.0" prefWidth="198.0" promptText="username" text=""/>
    </children>
 </AnchorPane>

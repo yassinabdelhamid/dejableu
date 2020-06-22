@@ -2,13 +2,16 @@ package application;
 
 	
 import javafx.application.Application;
+import javafx.event.ActionEvent;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import java.io.IOException;
 import javafx.animation.Animation;
 import javafx.animation.FadeTransition;
 import javafx.application.Application;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -26,8 +29,10 @@ import javafx.scene.text.Text;
 
 public class Main extends Application {
 
+
 	@Override
 	public void start(Stage stage) throws Exception {
+		
 		
 		Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
 		
@@ -38,7 +43,9 @@ public class Main extends Application {
 		stage.setTitle("Dejableu");
 		stage.setScene(login);
 		stage.show();
+		
 		}
+	
 	
 	
 	public static void main(String[] args) {

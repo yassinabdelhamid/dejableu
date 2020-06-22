@@ -17,7 +17,7 @@ public class ControllerColourpart1 implements Initializable {
 	public Button next;
 	
 	//Methode um View zu wächseln 
-		public void start(ActionEvent event) {
+		public void nextGame(ActionEvent event) {
 			
 	    	Stage stage;
 			Parent root = null;
